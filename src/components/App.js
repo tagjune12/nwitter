@@ -5,8 +5,8 @@ import { updateProfile } from 'firebase/auth';
 
 const App = () => {
   const [init, setInint] = useState(false);
-  // const [isLoggedIn, setIsLoggedIn] = useState(authService.currentUser);
   const [userObj, setUserObj] = useState(null);
+
   useEffect(() => {
     authService.onAuthStateChanged(user => {
       if (user) {
@@ -14,10 +14,12 @@ const App = () => {
         setUserObj({
           displayName: user.displayName,
           uid: user.uid,
-          updateProfile: (args) => updateProfile(user, {
+          /*updateProfile: () => updateProfile(user, {
             displayName: user.displayName,
-          })
+          })*/
         });
+        console.log("Log from App", userObj);
+        console.log("Log from App", authService.currentUser);
       } else {
         // setIsLoggedIn(false);
         setUserObj(null);
@@ -30,10 +32,12 @@ const App = () => {
     setUserObj({
       displayName: user.displayName,
       uid: user.uid,
-      updateProfile: (args) => updateProfile(user, {
+      /*updateProfile: () => updateProfile(user, {
         displayName: user.displayName,
-      })
+      })*/
     });
+    console.log("Log from App(refreshUser: userObj)", userObj);
+    console.log("Log from App(refreshUser: authService.currentUser)", authService.currentUser);
   }
   return (
     <>
@@ -43,7 +47,7 @@ const App = () => {
         isLoggedIn={Boolean(userObj)}
         userObj={userObj}
       /> : "Initializing..."}
-      <footer>&copy; {new Date().getFullYear()} Nwitter</footer>
+      {/* <footer>&copy; {new Date().getFullYear()} Nwitter</footer> */}
     </>
   );
 }

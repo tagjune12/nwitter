@@ -32,8 +32,10 @@ const Profile = ({ refreshUser, userObj }) => {
         event.preventDefault();
         if (userObj.displayName !== newDisplayName) {
             // console.log(userObj.updateProfile);
-            await updateProfile(userObj, { displayName: newDisplayName });
+            await updateProfile(authService.currentUser, { displayName: newDisplayName }).then(console.log("updateProfile Finished"));
+            // await updateProfile(userObj, { displayName: newDisplayName });
             refreshUser();
+            console.log("Log from Profile:onSubmit", userObj);
         }
     }
     return (
