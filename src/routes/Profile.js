@@ -35,7 +35,7 @@ const Profile = ({ refreshUser, userObj }) => {
             await updateProfile(authService.currentUser, { displayName: newDisplayName }).then(console.log("updateProfile Finished"));
             // await updateProfile(userObj, { displayName: newDisplayName });
             refreshUser();
-            console.log("Log from Profile:onSubmit", userObj);
+            // console.log("Log from Profile:onSubmit", userObj);
         }
     }
     return (

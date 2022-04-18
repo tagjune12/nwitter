@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { getDocs, doc, deleteDoc, updateDoc } from 'firebase/firestore';
+import { doc, deleteDoc, updateDoc } from 'firebase/firestore';
 import { ref } from 'firebase/storage';
 import { dbService, storageService } from '../firebaseConfig';
 import { deleteObject } from 'firebase/storage';
@@ -23,7 +23,7 @@ const Nweet = ({ nweetObj, isOwner }) => {
     }
     const onSubmit = async (event) => {
         event.preventDefault();
-        console.log(nweetObj, newNweet);
+        // console.log(nweetObj, newNweet);
         const nweetTextRef = doc(dbService, "nweet", `${nweetObj.id}`);
         await updateDoc(nweetTextRef, {
             text: newNweet,

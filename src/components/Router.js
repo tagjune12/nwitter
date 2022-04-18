@@ -6,20 +6,21 @@ import Profile from "routes/Profile";
 
 const AppRouter = ({ refreshUser, isLoggedIn, userObj }) => {
 
-    console.log("Log from AppRouter", userObj);
+    // console.log("Log from AppRouter", userObj);
     return (
         <Router>
             {isLoggedIn && <Navigation userObj={userObj} />}
-            <div>
-                <Routes
-                    style={{
-                        maxWidth: 890,
-                        width: "100%",
-                        margin: "0 auto",
-                        marginTop: 80,
-                        display: "flex",
-                        justifyContent: "center",
-                    }}>
+            <div style={
+                {
+                    maxWidth: 890,
+                    width: "100%",
+                    margin: "0 auto",
+                    marginTop: 80,
+                    display: "flex",
+                    justifyContent: "center",
+                }
+            }>
+                <Routes>
                     {isLoggedIn ?
                         (<>
                             <Route path="/" element={<Home userObj={userObj} />} />

@@ -1,16 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
-import { authService } from 'firebaseConfig';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 const Navigation = ({ userObj }) => {
-    console.log("Log from Navigation", userObj);
+    // console.log("Log from Navigation", userObj);
     useEffect(() => {
-        console.log("Navigation is rerendered", userObj);
-        console.log("Navigation is rerendered", authService.currentUser);
+        // console.log("Navigation is rerendered", userObj);
+        // console.log("Navigation is rerendered", authService.currentUser);
     }, [userObj])
     return (
         <nav>

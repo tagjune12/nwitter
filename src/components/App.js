@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import AppRouter from "components/Router";
 import { authService } from "firebaseConfig";
-import { updateProfile } from 'firebase/auth';
+
 
 const App = () => {
   const [init, setInint] = useState(false);
@@ -18,8 +18,8 @@ const App = () => {
             displayName: user.displayName,
           })*/
         });
-        console.log("Log from App", userObj);
-        console.log("Log from App", authService.currentUser);
+        // console.log("Log from App", userObj);
+        // console.log("Log from App", authService.currentUser);
       } else {
         // setIsLoggedIn(false);
         setUserObj(null);
@@ -36,8 +36,8 @@ const App = () => {
         displayName: user.displayName,
       })*/
     });
-    console.log("Log from App(refreshUser: userObj)", userObj);
-    console.log("Log from App(refreshUser: authService.currentUser)", authService.currentUser);
+    // console.log("Log from App(refreshUser: userObj)", userObj);
+    // console.log("Log from App(refreshUser: authService.currentUser)", authService.currentUser);
   }
   return (
     <>

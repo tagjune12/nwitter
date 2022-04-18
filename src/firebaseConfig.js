@@ -9,7 +9,6 @@ import { getStorage } from "firebase/storage";
 // Your web app's Firebase configuration
 const firebaseConfig = {
     apiKey: process.env.REACT_APP_API_KEY,
-    // apiKey: "AIzaSyDcs1GFAesG7VnsaBApYPT_3l3ZPRkqoWE",
     authDomain: process.env.REACT_APP_AUTH_DOMAIN,
     projectId: process.env.REACT_APP_PROJECT_ID,
     storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
@@ -24,5 +23,4 @@ export const createAccount = (auth, email, password) => createUserWithEmailAndPa
 export const signin = (auth, email, password) => signInWithEmailAndPassword(auth, email, password);
 export const socialSignIn = (auth, provider) => signInWithPopup(auth, provider);
 export const dbService = getFirestore(app);
-// export const storageService = getStorage(app);
 export const storageService = getStorage();
