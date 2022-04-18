@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# 트위터 클론코딩
+> Firebase와 React를 이용해서 만들어보는 Twitter 클론코딩
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+한 두 문단으로 프로젝트 소개 글을 작성합니다.
 
-## Available Scripts
+![](https://user-images.githubusercontent.com/54172578/163827832-805d6d21-10cd-43aa-9145-a9f80e65801d.png)
 
-In the project directory, you can run:
 
-### `npm start`
+## 설치 방법
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Firebase에 앱을 등록하고 API Key를 받는다.
+2. git clone으로 레포지토리를 복사한다
+```sh
+git clone https://github.com/tagjune12/nwitter.git
+```
+3. firebseConfig.js에 내 API Key를 넣는다
+```
+const firebaseConfig = {
+    apiKey: 내 api key,
+    authDomain: 내 authDomain,
+    projectId: 내 projectId,
+    storageBucket: 내 storageBucket,
+    messagingSenderId: 내 messagingSenderId,
+    appId: 내 appId,
+};
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 사용 예제
 
-### `npm test`
+1. 로컬 환경에서 실행
+```
+npm start
+```
+2. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 개발 환경 설정
 
-### `npm run build`
+```sh
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 업데이트 내역
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* 0.0.1
+    * 작업 진행 중
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 정보
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+이택준 – tagjune12@gmail.com
