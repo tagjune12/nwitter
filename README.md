@@ -1,10 +1,11 @@
 # 트위터 클론코딩
 > Firebase와 React를 이용해서 만들어보는 Twitter 클론코딩
 
-한 두 문단으로 프로젝트 소개 글을 작성합니다.
 
 ![image](https://user-images.githubusercontent.com/54172578/163839095-a4b4fa42-39a1-417c-8cb5-51d05d6bf5ce.png)
 
+React와 Firebase를 이용해서 만들어본 Twitter 클론코딩 페이지.
+Firebase의 auth api를 이용해 로그인 기능을 구현하고 firestore와 storage api를 이용해 트윗과 트윗에 첨부하는 이미지를 저장하도록 구현하였다.
 
 ## 개발 환경
 + React
