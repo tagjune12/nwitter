@@ -18,7 +18,6 @@ const Auth = () => {
             provider = new GithubAuthProvider();
         }
         const data = await socialSignIn(authService, provider);
-        // console.log(data);
     }
 
     return (

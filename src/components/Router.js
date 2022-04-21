@@ -3,13 +3,27 @@ import Home from '../routes/Home';
 import Auth from '../routes/Auth';
 import Navigation from "./Navigation";
 import Profile from "routes/Profile";
+import { useState } from "react";
 
 const AppRouter = ({ refreshUser, isLoggedIn, userObj }) => {
 
-    // console.log("Log from AppRouter", userObj);
+    const [isPC, setIsPC] = useState(window.innerWidth >= 801);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 801);
+
+    window.onresize = () => {
+
+        if (window.innerWidth >= 801) {
+            setIsPC(true);
+            setIsMobile(false);
+        } else {
+            setIsPC(false);
+            setIsMobile(true);
+        }
+    }
+
     return (
         <Router>
-            {isLoggedIn && <Navigation userObj={userObj} />}
+            {isLoggedIn && isMobile && <Navigation userObj={userObj} />}
             <div style={
                 {
                     maxWidth: 890,
@@ -20,6 +34,7 @@ const AppRouter = ({ refreshUser, isLoggedIn, userObj }) => {
                     justifyContent: "center",
                 }
             }>
+                {isLoggedIn && isPC && <Navigation userObj={userObj} />}
                 <Routes>
                     {isLoggedIn ?
                         (<>

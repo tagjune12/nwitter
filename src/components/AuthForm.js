@@ -18,15 +18,12 @@ const AuthForm = () => {
                 // 로그인
                 data = await signin(authService, email, password);
             }
-            // console.log(data);
         } catch (error) {
             console.log(error);
             setError(error.message);
         }
     }
     const onChange = (event) => {
-        // console.log(event.target.value);
-        // console.log(event.target);
         const {
             target: { name, value }
         } = event;
@@ -36,7 +33,7 @@ const AuthForm = () => {
             setPassword(value);
         }
     }
-    const toggleAccount = () => setNewAccount((prev) => !prev); // ???
+    const toggleAccount = () => setNewAccount((prev) => !prev);
 
     return (
         <>

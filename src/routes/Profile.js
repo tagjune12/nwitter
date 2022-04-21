@@ -17,7 +17,6 @@ const Profile = ({ refreshUser, userObj }) => {
         const q = query(collection(dbService, "nweet"), orderBy("createdAt", "desc"), where("creatorId", "==", `${userObj.uid}`));
         const querySnapShot = await getDocs(q);
         querySnapShot.forEach(doc => {
-            // console.log(doc.id, "=>", doc.data());
         })
     }
     useEffect(() => {
@@ -31,11 +30,8 @@ const Profile = ({ refreshUser, userObj }) => {
     const onSubmit = async (event) => {
         event.preventDefault();
         if (userObj.displayName !== newDisplayName) {
-            // console.log(userObj.updateProfile);
             await updateProfile(authService.currentUser, { displayName: newDisplayName }).then(console.log("updateProfile Finished"));
-            // await updateProfile(userObj, { displayName: newDisplayName });
             refreshUser();
-            // console.log("Log from Profile:onSubmit", userObj);
         }
     }
     return (

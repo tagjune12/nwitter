@@ -23,7 +23,6 @@ const Nweet = ({ nweetObj, isOwner }) => {
     }
     const onSubmit = async (event) => {
         event.preventDefault();
-        // console.log(nweetObj, newNweet);
         const nweetTextRef = doc(dbService, "nweet", `${nweetObj.id}`);
         await updateDoc(nweetTextRef, {
             text: newNweet,

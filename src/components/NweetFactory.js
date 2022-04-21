@@ -30,15 +30,6 @@ const NweetFactory = ({ userObj }) => {
         await addDoc(collection(dbService, "nweet"), nweetObj);
         setNweet("");
         setAttachment("");
-        // console.log(response);    
-
-        // await addDoc(collection(dbService, "nweet"), {
-        //     text: nweet,
-        //     createAt: Date.now(),
-        //     creatorId: userObj.uid,
-        // })
-        // setNweet("");
-
     }
     const onChange = (event) => {
         const { target: { value } } = event;
@@ -49,7 +40,6 @@ const NweetFactory = ({ userObj }) => {
         const theFile = files[0];
         const reader = new FileReader();
         reader.onloadend = (finishedEvent) => {
-            // console.log(finishedEvent);
             const { currentTarget: { result } } = finishedEvent;
             setAttachment(result);
         }
