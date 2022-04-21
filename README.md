@@ -94,7 +94,8 @@ Add photos를 클릭하여 트윗과 이미지를 함께 등록이 가능하다
 ![image](https://user-images.githubusercontent.com/54172578/163839541-97936b40-729c-4a6d-96d9-01a351f00295.png)
 
 ## 업데이트 내역
-
+* 0.1.0
+    * 반응형 navbar 적용
 * 0.0.1
     * 최초 배포 완료
 
